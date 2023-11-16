@@ -1,9 +1,8 @@
 #about_us_hero_section {
-  padding-top: 80px;
   align-items: center;
   justify-content: space-around;
   padding: 0 5%;
-  height: 800px;
+  padding-top: 120px;
   overflow: hidden;
   position: relative;
 }
@@ -28,13 +27,12 @@
   font-size: var(--body_text);
 }
 .about_us_hero_right_container {
-  height: 400px;
-  width: 400px;
-  background-color: red;
-  overflow: hidden;
   position: relative;
   display: grid;
   place-items: center;
+  border: 2px solid var(--font-second-color);
+  border: 2px solid var(--theme-color);
+  padding: 1em;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -42,6 +40,79 @@
   -o-border-radius: 50%;
 }
 .about_us_hero_right_container figure {
-  position: absolute;
-  top: -10%;
+  height: 400px;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  overflow: hidden;
+}
+
+.about_us_hero_right_container figure img {
+  transform: translateX(-30%);
+  -webkit-transform: translateX(-30%);
+  -moz-transform: translateX(-30%);
+  -ms-transform: translateX(-30%);
+  -o-transform: translateX(-30%);
+}
+.know_us_better_text {
+  color: var(--font-second-color);
+  font-size: var(--body_text);
+  text-align: center;
+}
+.popular-courses-container,
+.coaches-main-container {
+  margin: 1em auto;
+}
+.left_about_inner_container {
+  gap: 2em;
+}
+.left_about_inner_container img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.left_about_inner_container img:first-child {
+  width: 200px;
+  height: 220px;
+}
+.left_about_inner_container img:last-child {
+  width: 250px;
+  height: 280px;
+}
+.right_about_inner_container:first-child {
+  width: 200px;
+  height: 300px;
+  opacity: 0;
+}
+.right_about_inner_container:last-child {
+  width: 300px;
+  height: 300px;
+}
+@media screen and (max-width: 1020px) {
+  .about_us_hero_right_container figure {
+    height: 300px;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  #about_us_hero_section {
+    flex-direction: column-reverse;
+    padding-top: 80px;
+    gap: 2em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #about_us_hero_section {
+    flex-direction: column-reverse;
+    padding-top: 80px;
+  }
 }
