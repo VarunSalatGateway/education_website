@@ -602,9 +602,9 @@ body {
 #mission-section,
 #testimonial-section {
   background-color: var(--about-us-background);
+  min-height: 700px;
   display: flex;
   justify-content: space-between;
-  min-height: 700px;
 }
 
 .left-about-container,

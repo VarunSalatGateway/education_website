@@ -33,32 +33,45 @@ window.addEventListener("scroll", () => {
 });
 
 // THEME SELECTION
-
-// localStorage.setItem('theme', '')
+const lightThemeWave = document.getElementById("light_theme_wave");
 if (localStorage.getItem("theme") == "black") {
   document.querySelector("body").classList.add("dark");
   document.querySelector(".dark-btn").classList.remove("theme-btn-hide");
   document.querySelector(".light-btn").classList.add("theme-btn-hide");
+  if (lightThemeWave) {
+    lightThemeWave.style.display = "none";
+  }
 } else {
   document.querySelector("body").classList.remove("dark");
   document.querySelector(".dark-btn").classList.add("theme-btn-hide");
   document.querySelector(".light-btn").classList.remove("theme-btn-hide");
+  if (lightThemeWave) {
+    lightThemeWave.style.display = "block";
+  }
 }
 
 window.addEventListener("load", () => {
   // THEME-CHEKING
-  themeBtn = document.querySelector(".theme-btn-container");
+  const themeBtn = document.querySelector(".theme-btn-container");
   themeBtn.addEventListener("click", () => {
+    console.log("this is the light theme");
     if (document.body.classList.contains("dark")) {
       document.querySelector("body").classList.remove("dark");
       document.querySelector(".dark-btn").classList.add("theme-btn-hide");
       document.querySelector(".light-btn").classList.remove("theme-btn-hide");
       localStorage.setItem("theme", "white");
+      if (lightThemeWave) {
+        lightThemeWave.style.display = "block";
+      }
     } else {
       document.querySelector(".dark-btn").classList.remove("theme-btn-hide");
       document.querySelector(".light-btn").classList.add("theme-btn-hide");
       document.querySelector("body").classList.add("dark");
       localStorage.setItem("theme", "black");
+      if (lightThemeWave) {
+        console.log("white wave display");
+        lightThemeWave.style.display = "none";
+      }
     }
   });
   // THEME BUTTON

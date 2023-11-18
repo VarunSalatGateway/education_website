@@ -1,0 +1,217 @@
+#service_hero_section {
+  padding-top: 80px;
+  height: 480px;
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
+}
+.hero_wave {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  height: 700px;
+  top: 80px;
+  opacity: 0.5;
+}
+#hero-bg-book {
+  position: absolute;
+  width: 350px;
+  top: 100px;
+  left: 15%;
+}
+#hero-bg-book img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.service_hero_dis {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+}
+.service_hero_dis h3 {
+  font-size: var(--secondary_header);
+  color: var(--font-main-color);
+}
+.service_hero_dis p {
+  font-size: var(--body_text);
+  color: #fff;
+}
+.service_hero_dis p a {
+  color: var(--font-second-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+.service_hero_dis p a:hover {
+  color: #fff;
+}
+.section-header-container {
+  width: 100%;
+  height: fit-content;
+}
+.service_card_container {
+  margin-top: 4em;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: space-around;
+}
+.service_card {
+  position: relative;
+  width: min(320px, 100%);
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.service_card figure,
+.service_card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.service_card::before {
+  content: "";
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.service_card_dis {
+  position: absolute;
+  z-index: 2;
+  left: 1em;
+  bottom: 1em;
+}
+.service_card_dis h2 {
+  color: #fff;
+  font-size: var(--tertiary_header);
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+.service_card_dis button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: var(--body_text);
+  color: #fff;
+  text-decoration: underline;
+}
+.service_card_dis p {
+  display: block;
+  font-size: calc(var(--label_text) * 0.8);
+  color: #fff;
+}
+
+/* !HOW IT WORKS SECTION */
+
+#how-we-work-section {
+  background-color: var(--feature-background);
+}
+.section-header-container-2 {
+  margin: 0;
+}
+.how_we_work_header {
+  text-align: center;
+}
+.how_we_work_header h3 {
+  font-size: var(--tertiary_header);
+}
+.how_we_work_header h2 {
+  font-size: var(--secondary_header);
+  color: #fff;
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+.how_we_work_card_container {
+  margin-top: 4em;
+  align-items: center;
+  justify-content: space-between;
+}
+.how_we_work_card {
+  width: min(300px, 100%);
+  text-align: center;
+}
+.how_we_work_icon_container {
+  background-color: #abfad7;
+  margin: 0 auto;
+  height: 70px;
+  width: 70px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+#second_work_card .how_we_work_icon_container {
+  background-color: #f5bb9c;
+}
+#third_work_card .how_we_work_icon_container {
+  background-color: #badaf4;
+}
+.how_we_work_icon_container i {
+  font-size: var(--tertiary_header);
+}
+.arrow_container i {
+  font-size: calc(var(--primary_header) * 1.4);
+  color: #fff;
+}
+.how_we_work_card h4 {
+  font-size: var(--tertiary_header);
+  color: #fff;
+  font-weight: normal;
+  margin: 0.5em 0;
+}
+.how_we_work_card p {
+  color: #c3c3c3;
+}
+
+@media screen and (max-width: 750px) {
+  #service_hero_section {
+    height: 400px;
+  }
+  .how_we_work_card_container {
+    flex-direction: column;
+  }
+  .arrow_container {
+    margin: 2em 0;
+    transform: rotate(90deg) !important;
+    -webkit-transform: rotate(90deg) !important;
+    -moz-transform: rotate(90deg) !important;
+    -ms-transform: rotate(90deg) !important;
+    -o-transform: rotate(90deg) !important;
+  }
+  #how-we-work-section {
+    height: 100%;
+    padding-bottom: 2em;
+  }
+  .how_we_work_card_container {
+    margin-top: 2em;
+  }
+  .service_card_container {
+    margin-bottom: 4em;
+    margin-top: 2em;
+  }
+  .service_card {
+    width: min(400px, 90%);
+    height: 450px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .hero_wave {
+    height: 600px;
+    width: 700px;
+  }
+}
