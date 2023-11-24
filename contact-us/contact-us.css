@@ -237,26 +237,171 @@
   margin-top: 1em;
 }
 
-/* !OUR SERVICES */
-.what_we_offer_main_container {
+/* !QUICK CONTACTS */
+.quick_contact_card_container {
   margin-top: 4em;
+  margin-bottom: 4em;
   flex-wrap: wrap;
-  justify-content: space-around;
   gap: 2em;
+  justify-content: space-around;
 }
-.what_we_offer_container {
-  width: min(250px, 100%);
+.quick_contact_card {
+  position: relative;
+  height: 150px;
+  width: min(300px, 100%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 1em;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
-.what_we_offer_container li {
-  gap: 0.5em;
-  margin: 1em 0;
+body.dark .quick_contact_card {
+  border: 1px solid var(--font-second-color);
+}
+.quick_contact_icon_container {
+  position: absolute;
+  background-color: var(--theme-color);
+  left: 50%;
+  top: -18%;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-items: center;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.quick_contact_card:nth-child(2) .quick_contact_icon_container,
+.quick_contact_card:nth-child(3) .quick_contact_icon_container {
+  font-size: var(--tertiary_header);
+}
+
+.quick_card_dis {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+}
+.quick_card_dis h3 {
+  font-size: var(--tertiary_header);
+  color: var(--font-second-color);
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+.quick_card_dis a {
+  font-size: var(--body_text);
+  text-decoration: none;
   color: var(--font-main-color);
+}
+
+/* FAQ STYLES */
+/* .contact_us_form_left_container {
+  margin-top: 4em;
+  width: min(600px, 100%);
+}
+.contact_us_form_left_container h3 {
+  color: var(--font-second-color);
+  font-weight: 500;
+}
+.faq_container {
+  padding: 1em;
+  margin-top: 1em;
+  border: 2px solid #cdcdcd;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.faq_card {
+  height: 35px;
+  max-height: 35px;
+  overflow: hidden;
+  cursor: pointer;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #cdcdcd;
+}
+.faq_que {
+  font-size: var(--tertiary_header);
+
+  margin-bottom: 0.4em;
+} */
+
+/* CONTACT US */
+.contact_us_form_container {
+  width: 100%;
+  margin-top: 2em;
+}
+.contact_us_form_container form {
+  width: min(800px, 100%);
+  margin: 0 auto;
+}
+.input_main_container {
+  width: 100%;
+  gap: 2em;
+  margin: 1em 0;
+}
+
+.input_container {
+  gap: 0.5em;
+  flex-direction: column;
+  width: 100%;
+}
+.input_container label {
+  color: var(--font-second-color);
   font-size: var(--body_text);
 }
-.what_we_offer_container li i {
-  font-size: var(--label_text);
-  color: var(--font-second-color);
+.input_container input {
+  font-size: var(--body_text);
+  width: 100%;
+  color: var(--font-main-color);
+  background-color: transparent;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
+#contact-dis {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  font-size: var(--body_text);
+  color: var(--font-main-color);
+  resize: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+#submit_btn {
+  cursor: pointer;
+  border: none;
+
+  margin: 0;
+}
+/* !RESPONSIVE  */
 @media screen and (max-width: 750px) {
   #service_hero_section {
     height: 400px;
@@ -264,6 +409,7 @@
   .how_we_work_card_container {
     flex-direction: column;
   }
+
   .arrow_container {
     margin: 2em 0;
     transform: rotate(90deg) !important;
@@ -286,6 +432,18 @@
   .service_card {
     width: min(400px, 90%);
     height: 450px;
+  }
+  .quick_contact_card_container {
+    gap: 4em;
+  }
+}
+@media screen and (max-width: 610px) {
+  .contact_us_form_container {
+    margin-bottom: 4em;
+  }
+  .input_main_container {
+    flex-direction: column;
+    gap: 1em;
   }
 }
 @media screen and (max-width: 520px) {
